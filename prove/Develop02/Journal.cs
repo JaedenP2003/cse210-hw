@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Text.Json;
 
 public class Journal
 {
@@ -19,40 +20,24 @@ public class Journal
             entry.Display();
         }
     }
-
-    public void SaveToFile(string filename)
+    public void SaveToJson(string filename)
     {
-        using (StreamWriter writer = new StreamWriter(filename))
-        {
-            foreach (var entry in Entries)
-            {
-                writer.WriteLine($"{entry.Date}|{entry.Prompt}|{entry.StringEntry}");
-            }
-        }
+        string json = JsonSerializer.Serialize(Entries, new JsonSerializerOptions { WriteIndented = true });
+        File.WriteAllText(filename, json);
         Console.WriteLine($"Entries saved to {filename}");
     }
 
-    public void LoadFromFile(string filename)
+    public void LoadFromJson(string filename)
     {
-        Entries.Clear();
-
         if (!File.Exists(filename))
         {
             Console.WriteLine("File not found!");
             return;
         }
 
-        string[] lines = File.ReadAllLines(filename);
-        foreach (string line in lines)
-        {
-            string[] parts = line.Split('|');
-            if (parts.Length == 3)
-            {
-                Entry entry = new Entry(parts[1], parts[2]);
-                entry.Date = parts[0]; // override with saved date
-                Entries.Add(entry);
-            }
-        }
+        string json = File.ReadAllText(filename);
+        Entries = JsonSerializer.Deserialize<List<Entry>>(json);
         Console.WriteLine($"Entries loaded from {filename}");
     }
+
 }

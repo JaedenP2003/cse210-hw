@@ -39,13 +39,13 @@ public class Program
                 case "3":
                     Console.Write("Enter filename to load: ");
                     string loadFile = Console.ReadLine();
-                    journal.LoadFromFile(loadFile);
+                    journal.LoadFromJson(loadFile);
                     break;
 
                 case "4":
                     Console.Write("Enter filename to save: ");
                     string saveFile = Console.ReadLine();
-                    journal.SaveToFile(saveFile);
+                    journal.SaveToJson(saveFile);
                     break;
 
                 case "5":

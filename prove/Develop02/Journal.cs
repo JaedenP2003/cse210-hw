@@ -5,24 +5,24 @@ using System.Text.Json;
 
 public class Journal
 {
-    public string Filename { get; set; }
-    public List<Entry> Entries { get; set; } = new List<Entry>();
+    public string _filename;
+    private List<Entry> _entries = new List<Entry>();
 
     public void AddEntry(Entry entry)
     {
-        Entries.Add(entry);
+        _entries.Add(entry);
     }
 
     public void DisplayAllEntries()
     {
-        foreach (var entry in Entries)
+        foreach (var entry in _entries)
         {
             entry.Display();
         }
     }
     public void SaveToJson(string filename)
     {
-        string json = JsonSerializer.Serialize(Entries, new JsonSerializerOptions { WriteIndented = true });
+        string json = JsonSerializer.Serialize(_entries, new JsonSerializerOptions { WriteIndented = true });
         File.WriteAllText(filename, json);
         Console.WriteLine($"Entries saved to {filename}");
     }
@@ -36,7 +36,7 @@ public class Journal
         }
 
         string json = File.ReadAllText(filename);
-        Entries = JsonSerializer.Deserialize<List<Entry>>(json);
+        _entries = JsonSerializer.Deserialize<List<Entry>>(json);
         Console.WriteLine($"Entries loaded from {filename}");
     }
 

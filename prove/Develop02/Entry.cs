@@ -1,23 +1,24 @@
 using System;
+using System.ComponentModel;
 
 public class Entry
 {
-    public string Date { get; set; }
-    public string Prompt { get; set; }
-    public string StringEntry { get; set; }
+    private string _date;
+    private string _prompt;
+    private string _stringEntry;
 
     public Entry(string prompt, string entryText)
     {
-        Date = DateTime.Now.ToString("yyyy-MM-dd");
-        Prompt = prompt;
-        StringEntry = entryText;
+        _date = DateTime.Now.ToString("yyyy-MM-dd");
+        _prompt = prompt;
+        _stringEntry = entryText;
     }
 
     public void Display()
     {
-        Console.WriteLine($"Date: {Date}");
-        Console.WriteLine($"Prompt: {Prompt}");
-        Console.WriteLine($"Entry: {StringEntry}");
+        Console.WriteLine($"Date: {_date}");
+        Console.WriteLine($"Prompt: {_prompt}");
+        Console.WriteLine($"Entry: {_stringEntry}");
         Console.WriteLine("-----------------------------------");
     }
 }

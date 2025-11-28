@@ -35,5 +35,8 @@ public class SimpleGoal : Goal
         return $"SIMPLE|{Escape(GetName())}|{Escape(GetDescription())}|{GetPoints()}|{IsComplete()}";
     }
 
-    private string Escape(string s) => s.Replace("|", "&#124;");
+    private string Escape(string s)
+    {
+        return s.Replace("|", "&#124;");
+    }
 }

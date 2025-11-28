@@ -18,10 +18,26 @@ public abstract class Goal
     }
 
     // Public accessors (read-only)
-    public string GetName() => _name;
-    public string GetDescription() => _description;
-    public int GetPoints() => _points;
-    public bool IsComplete() => _isComplete;
+    public string GetName()
+    {
+        return _name;
+    }
+
+    public string GetDescription()
+    {
+        return _description;
+    }
+
+    public int GetPoints()
+    {
+        return _points;
+    }
+
+    public bool IsComplete()
+    {
+        return _isComplete;
+    }
+
 
     // Protected setter for derived classes to mark completion
     protected void SetComplete(bool value) => _isComplete = value;

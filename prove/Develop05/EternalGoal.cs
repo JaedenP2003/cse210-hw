@@ -26,5 +26,8 @@ public class EternalGoal : Goal
         return $"ETERNAL|{Escape(GetName())}|{Escape(GetDescription())}|{GetPoints()}";
     }
 
-    private string Escape(string s) => s.Replace("|", "&#124;");
+    private string Escape(string s) 
+    {
+        return s.Replace("|", "&#124;");
+    }
 }

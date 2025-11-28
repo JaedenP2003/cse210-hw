@@ -47,9 +47,23 @@ public class ChecklistGoal : Goal
     }
 
     // Methods to initialize state when loading
-    public void SetCurrentCount(int value) => _currentCount = value;
-    public void SetTargetCount(int value) => _targetCount = value;
-    public void SetBonus(int value) => _bonusPoints = value;
+    public void SetCurrentCount(int value)
+    {
+        _currentCount = value;
+    }
 
-    private string Escape(string s) => s.Replace("|", "&#124;");
+    public void SetTargetCount(int value)
+    {
+        _targetCount = value;
+    }
+
+    public void SetBonus(int value)
+    {
+        _bonusPoints = value;
+}
+
+    private string Escape(string s)
+    {
+        return s.Replace("|", "&#124;");
+    }
 }

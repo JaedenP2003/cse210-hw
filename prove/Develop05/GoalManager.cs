@@ -298,9 +298,18 @@ public class GoalManager
         }
     }
 
-    public int GetLevel() => _score / 1000;
+    public int GetLevel()
+    {
+        return _score / 1000;
+    }
 
     // Expose saving/loading with default file name
-    public void SaveDefault() => SaveGoals("goals_save.txt");
-    public void LoadDefault() => LoadGoals("goals_save.txt");
+    public void SaveDefault()
+    {
+        SaveGoals("goals_save.txt");
+    }
+    public void LoadDefault()
+    {
+        LoadGoals("goals_save.txt");
+    }
 }

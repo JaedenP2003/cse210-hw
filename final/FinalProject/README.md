@@ -1,7 +1,7 @@
 This project is pretty simple and is laid out like so:
-1) Character Creation
-2) Quest Creation
-3) Saving and Loading
+-Character Creation
+-Quest Creation
+-Saving and Loading
 
 1) You start the program by creating a character with a name and choosing one of three classes: Warrior, Mage and Rogue. You can only have one character at a time for right now. Your character will have a level, XP counter, and total points. As your XP goes up, so does your level.
 

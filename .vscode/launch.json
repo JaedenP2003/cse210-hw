@@ -189,10 +189,10 @@
             "name": "Final Project (Open ended)",
             "type": "coreclr",
             "request": "launch",
-            "preLaunchTask": "build-final-QuestTracker",
-            "program": "${workspaceFolder}/final/QuestTracker/bin/Debug/netcoreapp3.1/QuestTracker.dll",
+            "preLaunchTask": "build-final-FinalProject",
+            "program": "${workspaceFolder}/final/FinalProject/bin/Debug/net8.0/FinalProject.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/final/QuestTracker",
+            "cwd": "${workspaceFolder}/final/FinalProject",
             "console": "integratedTerminal",
             "internalConsoleOptions": "neverOpen",
             "stopAtEntry": false

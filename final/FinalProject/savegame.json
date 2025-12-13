@@ -1,0 +1,41 @@
+{
+  "_quests": [
+    {
+      "$type": "simple",
+      "_name": "First Steps",
+      "_description": "Finish your first task",
+      "_points": 10,
+      "_isComplete": true
+    },
+    {
+      "$type": "collection",
+      "_requiredCount": 3,
+      "_currentCount": 3,
+      "_name": "Collector",
+      "_description": "Gather 3 items",
+      "_points": 20,
+      "_isComplete": true
+    },
+    {
+      "$type": "boss",
+      "_name": "Big Bad",
+      "_description": "Defeat the boss",
+      "_points": 50,
+      "_isComplete": true
+    },
+    {
+      "$type": "simple",
+      "_name": "Gather Wheat",
+      "_description": "Gather 5 bundles of wheat for Impa",
+      "_points": 20,
+      "_isComplete": true
+    }
+  ],
+  "_totalPoints": 100,
+  "_player": {
+    "$type": "warrior",
+    "_name": "Link",
+    "_level": 2,
+    "_experience": 0
+  }
+}

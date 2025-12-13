@@ -186,12 +186,12 @@
         },
 
         {
-            "label": "build-final-QuestTracker",
+            "label": "build-final-FinalProject",
             "command": "dotnet",
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/final/QuestTracker/QuestTracker.csproj",
+                "${workspaceFolder}/final/FinalProject/FinalProject.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
